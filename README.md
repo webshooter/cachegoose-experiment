@@ -1,0 +1,3 @@
+This personal repo was created as a playground for me to understand some mongodb caching methodologies.
+
+The original mongodb/mongoose caching code files were pulled from the excellent Cachegoose project (https://github.com/boblauer/cachegoose). I have simply updated those files to experiment with different approaches to caching mongoose queries and options for fully hydrating the documents and subdocuments.
