@@ -1,0 +1,27 @@
+{
+  "name": "mongoose-cache",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Randall Nickerson <randall.nickerson@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "cacheman": "^2.2.1",
+    "cacheman-redis": "^2.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "jsosort": "0.0.0",
+    "mongoose": "^5.8.9",
+    "redis": "^2.8.0",
+    "sha1": "^1.1.1"
+  }
+}
