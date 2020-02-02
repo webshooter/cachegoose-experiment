@@ -28,7 +28,7 @@ const hydrateDocuments = ({
       : model.hydrateMe({ json: documents, populate });
   }
 
-  // if hydate is false then just rehydrate
+  // if hydrate is false then just rehydrate
   // and return the model(s) without population as usual
   if (!isLean) {
     results = Array.isArray(documents)
@@ -84,22 +84,6 @@ module.exports = function extendQuery(mongoose, cache) {
           const hydratedResults = hydrator({ documents: results, model });
           callback(null, hydratedResults);
           return resolve(hydratedResults);
-
-          // if (hydrate) {
-          //   // if we can and should hydrate then always
-          //   // find/fill subdocs and return the model(s)
-          //   const populate = this._populate || undefined;
-          //   cachedResults = Array.isArray(cachedResults)
-          //     ? cachedResults.map(doc => model.hydrateMe({ json: doc, populate }))
-          //     : model.hydrateMe({ json: cachedResults, populate });
-          // } else if (!isLean) {
-          //   // if hydate is false then just rehydrate
-          //   // and return the model(s) as usual
-          //   const constructor = mongoose.model(modelName);
-          //   cachedResults = Array.isArray(cachedResults)
-          //     ? cachedResults.map(hydrateModel(constructor))
-          //     : hydrateModel(constructor)(cachedResults);
-          // }
         }
 
         // eslint-disable-next-line no-console
